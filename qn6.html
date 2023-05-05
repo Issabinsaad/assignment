@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my CV</title>
+</head>
+<style>
+    body{
+        background-color: silver;
+    }
+    h1{
+        color: white;
+        background-color: silver;
+    }
+    table,tr,td{
+        border-collapse: collapse;
+        border: 1px solid black;
+        
+        
+    }
+   
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">My CV</h1>
+        <h2><u>My Personal Information</u></h2>
+        <table style="width: 60%;">
+            <tr>
+                <td>Name</td>
+                <td>hafidhi</td>
+                
+            </tr>
+            <tr>
+                <td>Email </td>
+                <td>hafidh@gmail.com</td>  
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>0773757085</td>
+                <tr>
+                    <td>Adress</td>
+                    <td>Zanzibar</td>
+
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>Male</td>
+
+                </tr>
+                <tr>
+                    <td>Religion:</td>
+                    <td>Islamic</td>
+                </tr>
+
+            </tr>
+            
+
+        </table>
+        <h2><u>Education Background</u></h2>
+        <table style="width: 45%;">
+            <tr>
+                <td>State University Of Zanzibar: </td>
+                 <td>2021-2024</td>
+
+            </tr>
+            <tr>
+                <td>Faraja high school</td>
+                <td>2018-2020</td>
+            </tr>
+            <tr>
+                <td>Fuoni Sec school</td>
+                <td>2014-2017</td>
+            </tr>
+            <tr>
+                <td>fuoni primary school</td>
+                <td>2006-2013</td>
+            </tr>
+        </table>
+        <h2><u>Working Experience</u></h2>
+        <table style="width: 35%;">
+            <tr>
+                <td>ICT CENTER</td></tr>
+            <td> COMPANY</td></tr>
+            </table>
+        <h2><u>Skills</u></h2>
+		<table style="width: 35%;">
+        <tr>
+            <td>computer maintainance</td></tr>
+            <td>Networker designer</td></tr>
+            <td>problem solving skill</td>
+        </tr>
+		 </table>
+        <h2><u>Proffesional Course</u></h2>
+		<table style="width: 35%;">
+		<tr>
+            <td>computer maintainance course</td></tr>
+            <td>web application Course</td></tr>
+            <td>software develpoment course</td></tr></tr>
+            <td>communiction skill course</td>
+         </tr>
+		 </table>
+        <h2><u>Management experience</u></h2>
+        <p>when I was at nag dadaz high school i was a leader of environmental department on 2020</p>
+        <h2><u>Dependents</u></h2>
+        
+        <ul>
+            <li>father</li>
+            <li>mother</li>
+            <li>brother</li>
+            <li>sister</li>
+            <li>aunt</li>
+            
+            
+
+        </ul>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.675177817964!2d39.30714745002535!3d-6.208362718504129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd87fff0e403b%3A0xe5c2714deb19d725!2sTunguu!5e0!3m2!1sen!2stz!4v1682943518384!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div class="container">
+        <h2>Contact us</h2>
+        <form id="naymar">
+            <label for="message">message</label>
+            <input type="textarea" id="message" name="message"><br><br>
+            <input  type="submit" value="submit"><br>
+
+        </form>
+       
+    </div>
+   <script>
+        let contactus = document.getElementById("naymar");
+        contactus.addEventListener('submit',function(event){
+            event.preventDefault();
+            //data in html put in javascript
+            let message = document.getElementById("message").value;
+            //contant take data inform of object
+            let contact ={
+            name:name,email:email,phone:Phone
+            };
+            //data inform of JSON
+            let contacts =JSON.parse(localStorage.getItem("contacts"))||[];
+            // when user want to see those data hence can be tansform from json to object
+            contacts.push(contact);
+            localStorage.setItem("contacts",JSON.stringify(contacts));
+            alert(`thank you ${name} for ure comment`);
+            contactus.reset();
+        });    
+   </script> 
+</body>
+</html>
